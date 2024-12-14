@@ -39,5 +39,11 @@ namespace TestAutomation_Web
         {
             driver.FindElement(element).Click();
         }
+
+        public string Title()
+        {
+            var title = driver.FindElement(By.ClassName("entry-title"));
+            return title.Text;
+        }
     }
 }

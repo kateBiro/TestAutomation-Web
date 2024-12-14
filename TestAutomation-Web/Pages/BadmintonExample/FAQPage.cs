@@ -7,14 +7,17 @@ using System.Threading.Tasks;
 
 namespace TestAutomation_Web.Pages.BadmintonExample
 {
-    public class AboutUs : WebdriverBase
+    public class FAQPage : WebdriverBase
     {
-        public AboutUs(WebDriver driver)
+        public FAQPage(WebDriver driver)
         {
             this.driver = driver;
         }
 
+        //accordian structure
+
+        //return true for accordian open
+
 
     }
-
 }

@@ -34,7 +34,6 @@ namespace TestAutomation_Web.Pages.BadmintonExample
 
         public WebdriverBase Navigate(NavButtons navButtons)
         {
-            Console.WriteLine("menu-item-" + ((int)navButtons));
             var button = By.Id("menu-item-" + ((int)navButtons));
 
             Click(button);
@@ -45,6 +44,8 @@ namespace TestAutomation_Web.Pages.BadmintonExample
                     return new BadmintonHome(driver);
                 case NavButtons.About_Us:
                     return new AboutUs(driver);
+                case NavButtons.FAQ:
+                    return new FAQPage(driver);
             }
 
             return this;
