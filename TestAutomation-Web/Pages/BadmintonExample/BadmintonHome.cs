@@ -45,11 +45,12 @@ namespace TestAutomation_Web.Pages.BadmintonExample
                 case NavButtons.About_Us:
                     return new AboutUs(driver);
                 case NavButtons.FAQ:
-                    return new FAQPage(driver);
+                    return this;
             }
 
             return this;
         }
+
 
 
     }
@@ -61,7 +62,7 @@ namespace TestAutomation_Web.Pages.BadmintonExample
         Membership = 112,
         Events,
         House_League,
-        FAQ,
+        FAQ = 1198,
         Contact_Us
     }
 }

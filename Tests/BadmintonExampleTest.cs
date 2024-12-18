@@ -15,7 +15,8 @@ namespace Tests
         public void AboutUsPage()
         {
             var title = home
-                .Navigate(NavButtons.About_Us)
+                .Navigate()
+                .GoToAboutUs()
                 .Title()
                 ;
             Console.WriteLine("Title: " + title);
@@ -50,8 +51,11 @@ namespace Tests
         [Test]
         public void AccordianOpenFunctional()
         {
-            home.Navigate(NavButtons.FAQ)
-                ;
+
+            Assert.That(home.Navigate()
+                .GoToFAQ()
+                .ValidateAccordiansOpen());
+
         }
 
         [TearDown]
